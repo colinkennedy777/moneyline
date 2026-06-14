@@ -1,18 +1,33 @@
 export const site = {
   name: "MoneyLine Mortgage",
   nmls: "123456",
-  phoneDisplay: "(555) 666-3954",
-  phoneHref: "tel:+1-555-MONEYLINE",
-  email: "hello@moneylinemortgage.com",
+  phoneDisplay: "(813) 645-9004",
+  phoneHref: "tel:+18136459004",
+  email: "scott@moneylinefl.com",
   address: {
     street: "123 Main St, Suite 100",
-    city: "Your City",
-    state: "ST",
-    zip: "12345",
+    city: "Tampa",
+    state: "FL",
+    zip: "33601",
   },
   url: "https://www.moneylinemortgage.com",
   tagline: "Mortgage Solutions Built Around Your MoneyLine.",
 };
+
+export const team = [
+  {
+    name: "Scott Kennedy",
+    email: "scott@moneylinefl.com",
+    phone: "(813) 767-0545",
+    phoneHref: "tel:+18137670545",
+  },
+  {
+    name: "Chad Kennedy",
+    email: "chad@moneylinefl.com",
+    phone: "(407) 340-1000",
+    phoneHref: "tel:+14073401000",
+  },
+];
 
 export const navLinks = [
   { href: "/loan-programs", label: "Loan Programs" },

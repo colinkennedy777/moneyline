@@ -12,21 +12,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-md shadow-sm">
       <nav className="container-px flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label={site.name}>
+        <Link href="/" aria-label={site.name}>
           <Image
             src="/logo.png"
             alt={site.name}
-            width={48}
+            width={120}
             height={48}
-            className="h-11 w-11 rounded-xl object-contain"
+            className="h-12 w-auto object-contain"
             priority
           />
-          <span className="hidden font-display text-lg font-bold leading-none text-slate-950 sm:block">
-            MoneyLine
-            <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gold">
-              Mortgage
-            </span>
-          </span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

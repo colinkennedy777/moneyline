@@ -10,20 +10,14 @@ export default function Footer() {
     <footer className="bg-navy-dark text-white/70">
       <div className="container-px grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/">
             <Image
               src="/logo.png"
               alt={site.name}
-              width={44}
-              height={44}
-              className="h-11 w-11 rounded-md object-contain"
+              width={130}
+              height={52}
+              className="h-12 w-auto object-contain"
             />
-            <span className="font-display text-lg font-bold text-white">
-              MoneyLine
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gold-light">
-                Mortgage
-              </span>
-            </span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
             Mortgage solutions built around your MoneyLine. Competitive rates,

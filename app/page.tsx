@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calculator as CalcIcon, CheckCircle2, Star, Phone } from "lucide-react";
+import { ArrowRight, Calculator as CalcIcon, CheckCircle2, Star } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import QuickQuoteForm from "@/components/QuickQuoteForm";
 import LoanProgramCard from "@/components/LoanProgramCard";
@@ -14,11 +14,11 @@ import { loanPrograms, valueProps, processSteps, testimonials, faqs } from "@/li
 export default function HomePage() {
   return (
     <>
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1800&q=80&auto=format&fit=crop"
-          alt="Beautiful family home"
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=80&auto=format&fit=crop"
+          alt="Modern luxury home"
           fill
           className="object-cover object-center"
           priority
@@ -66,7 +66,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
+      {/* STATS BAR */}
       <section className="bg-gold">
         <div className="container-px grid grid-cols-2 gap-8 py-5 md:grid-cols-4">
           {[
@@ -83,7 +83,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── LOAN PROGRAMS ── */}
+      {/* LOAN PROGRAMS */}
       <section className="bg-cream py-24 sm:py-28">
         <div className="container-px">
           <SectionHeading
@@ -99,7 +99,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── WHY MONEYLINE ── */}
+      {/* WHY MONEYLINE */}
       <section className="py-24 sm:py-28">
         <div className="container-px grid items-center gap-16 lg:grid-cols-2">
           <div className="relative overflow-hidden rounded-3xl aspect-[4/3] shadow-card-lg">
@@ -148,7 +148,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 3-STEP PROCESS ── */}
+      {/* 3-STEP PROCESS */}
       <section className="relative overflow-hidden py-24 sm:py-28">
         <Image
           src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80&auto=format&fit=crop"
@@ -180,7 +180,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
+      {/* TESTIMONIALS */}
       <section className="bg-cream py-24 sm:py-28">
         <div className="container-px">
           <SectionHeading
@@ -206,7 +206,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CALCULATOR ── */}
+      {/* CALCULATOR */}
       <section className="py-24 sm:py-28">
         <div className="container-px grid items-center gap-16 lg:grid-cols-2">
           <div>
@@ -235,7 +235,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
+      {/* FAQ */}
       <section className="bg-cream py-24 sm:py-28">
         <div className="container-px">
           <SectionHeading eyebrow="Questions" title="Frequently Asked Questions" />
@@ -245,7 +245,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ── */}
+      {/* FINAL CTA */}
       <FinalCTA />
     </>
   );
