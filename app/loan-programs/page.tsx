@@ -5,7 +5,6 @@ import SectionHeading from "@/components/SectionHeading";
 import LoanProgramCard from "@/components/LoanProgramCard";
 import LeadForm from "@/components/LeadForm";
 import FinalCTA from "@/components/FinalCTA";
-import MortgageCalculator from "@/components/MortgageCalculator";
 import { loanPrograms } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -144,9 +143,6 @@ export default function LoanProgramsPage() {
                 </p>
               </div>
             ))}
-          </div>
-          <div className="mx-auto mt-16 max-w-4xl">
-            <MortgageCalculator />
           </div>
         </div>
       </section>

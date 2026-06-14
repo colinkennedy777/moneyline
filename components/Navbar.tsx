@@ -11,14 +11,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-md shadow-sm">
-      <nav className="container-px flex h-20 items-center justify-between">
+      <nav className="container-px flex h-24 items-center justify-between">
         <Link href="/" aria-label={site.name}>
           <Image
             src="/logo.png"
             alt={site.name}
-            width={120}
-            height={48}
-            className="h-12 w-auto object-contain"
+            width={180}
+            height={72}
+            className="h-16 w-auto object-contain"
             priority
           />
         </Link>
