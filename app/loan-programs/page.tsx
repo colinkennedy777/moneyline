@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { TrendingDown, Clock, Wallet, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import LoanProgramCard from "@/components/LoanProgramCard";
 import LeadForm from "@/components/LeadForm";
 import FinalCTA from "@/components/FinalCTA";
+import MortgageCalculator from "@/components/MortgageCalculator";
 import { loanPrograms } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,6 +13,65 @@ export const metadata: Metadata = {
   description:
     "Explore MoneyLine Mortgage loan programs: Conventional, FHA, VA, Jumbo, USDA, and Refinance options tailored to your goals.",
 };
+
+const purchaseBenefits = [
+  "Same-day pre-approval letters to strengthen your offer",
+  "Low-down-payment programs starting at 3%",
+  "Dedicated advisor from application to closing",
+  "Rate-lock options to protect your budget",
+  "Clear, upfront cost estimates with no surprises",
+];
+
+const refinanceReasons = [
+  {
+    icon: TrendingDown,
+    title: "Lower Your Rate",
+    description:
+      "If rates have dropped or your credit has improved, a refinance could shrink your monthly payment significantly.",
+  },
+  {
+    icon: Clock,
+    title: "Shorten Your Term",
+    description:
+      "Move from a 30-year to a 15-year loan to build equity faster and save tens of thousands in interest.",
+  },
+  {
+    icon: Wallet,
+    title: "Access Your Equity",
+    description:
+      "A cash-out refinance lets you use your home's value for renovations, debt consolidation, or big goals.",
+  },
+];
+
+const firstTimeSteps = [
+  {
+    title: "Understand Your Budget",
+    description:
+      "We help you figure out a comfortable monthly payment before you ever tour a home.",
+  },
+  {
+    title: "Explore Programs",
+    description:
+      "Many first-time buyers qualify for down payment help and low-down-payment loans. We'll find them for you.",
+  },
+  {
+    title: "Get Pre-Approved",
+    description:
+      "Walk into showings with a strong pre-approval that sellers take seriously.",
+  },
+  {
+    title: "Close With Confidence",
+    description:
+      "We explain every document and cost so there are zero surprises at the table.",
+  },
+];
+
+const firstTimeChecklist = [
+  "Down payments as low as 3%",
+  "FHA loans for fair credit",
+  "Down payment assistance program guidance",
+  "First-time buyer education and support",
+];
 
 export default function LoanProgramsPage() {
   return (
@@ -22,6 +83,7 @@ export default function LoanProgramsPage() {
         cta={{ label: "Get Pre-Approved", href: "/contact" }}
       />
 
+      {/* All 6 Loan Program Cards */}
       <section className="py-20 sm:py-24">
         <div className="container-px">
           <SectionHeading
@@ -37,6 +99,97 @@ export default function LoanProgramsPage() {
         </div>
       </section>
 
+      {/* Purchase Section */}
+      <section className="bg-lightgray py-20 sm:py-24">
+        <div className="container-px grid items-start gap-12 lg:grid-cols-2">
+          <div>
+            <SectionHeading
+              center={false}
+              eyebrow="Purchase Loans"
+              title="Buy Your Next Home"
+            />
+            <ul className="mt-8 space-y-4">
+              {purchaseBenefits.map((b) => (
+                <li key={b} className="flex items-start gap-3 text-navy/75">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <LeadForm title="Start Your Pre-Approval" />
+        </div>
+      </section>
+
+      {/* Refinance Section */}
+      <section className="bg-navy py-20 text-white sm:py-24">
+        <div className="container-px">
+          <SectionHeading
+            dark
+            eyebrow="Refinance"
+            title="Three Reasons to Refinance"
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {refinanceReasons.map((r) => (
+              <div
+                key={r.title}
+                className="rounded-2xl border border-white/10 bg-navy-light p-8"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-gold-light">
+                  <r.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-xl font-bold">{r.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/65">
+                  {r.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mx-auto mt-16 max-w-4xl">
+            <MortgageCalculator />
+          </div>
+        </div>
+      </section>
+
+      {/* First-Time Buyers Section */}
+      <section className="py-20 sm:py-24">
+        <div className="container-px">
+          <SectionHeading
+            eyebrow="First-Time Buyers"
+            title="Your First Home Starts Here"
+          />
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            {firstTimeSteps.map((s, i) => (
+              <div
+                key={s.title}
+                className="flex gap-5 rounded-2xl border border-navy/5 bg-white p-7 shadow-card"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gold/15 font-display text-lg font-bold text-gold-dark">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-navy">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-navy/60">
+                    {s.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 rounded-2xl bg-lightgray p-8">
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {firstTimeChecklist.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-navy/75">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Lead Form */}
       <section className="bg-lightgray py-20 sm:py-24">
         <div className="container-px grid items-start gap-12 lg:grid-cols-2">
           <div>

@@ -31,13 +31,9 @@ export const team = [
 
 export const navLinks = [
   { href: "/loan-programs", label: "Loan Programs" },
-  { href: "/purchase", label: "Purchase" },
-  { href: "/refinance", label: "Refinance" },
-  { href: "/first-time-buyers", label: "First-Time Buyers" },
   { href: "/calculator", label: "Calculator" },
   { href: "/about", label: "About" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/blog", label: "Resources" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const loanPrograms = [
