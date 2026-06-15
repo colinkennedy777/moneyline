@@ -9,7 +9,7 @@ import MortgageCalculator from "@/components/MortgageCalculator";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Icon from "@/components/Icon";
-import { loanPrograms, valueProps, processSteps, testimonials, faqs } from "@/lib/site";
+import { loanPrograms, valueProps, processSteps, testimonials, faqs, stats } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="container-px relative z-10 grid items-center gap-16 py-24 lg:grid-cols-2 lg:py-32">
           <div className="animate-fadeUp">
             <span className="eyebrow mb-4 block">
-              Trusted Mortgage Advisors · NMLS #123456
+              Trusted Mortgage Advisors · NMLS #391072
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.5rem] xl:text-6xl">
               Mortgage Solutions{" "}
@@ -69,12 +69,7 @@ export default function HomePage() {
       {/* STATS BAR */}
       <section className="bg-gold">
         <div className="container-px grid grid-cols-2 gap-8 py-5 md:grid-cols-4">
-          {[
-            { num: "$2B+", label: "Loans Funded" },
-            { num: "5,000+", label: "Happy Homeowners" },
-            { num: "21 Days", label: "Avg. Close Time" },
-            { num: "4.9 ★", label: "Client Rating" },
-          ].map(({ num, label }) => (
+          {stats.map(({ num, label }) => (
             <div key={label} className="text-center">
               <p className="font-display text-2xl font-bold text-slate-950">{num}</p>
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-950/60">{label}</p>

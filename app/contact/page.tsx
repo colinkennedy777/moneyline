@@ -36,17 +36,18 @@ export default function ContactPage() {
           <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="overflow-hidden rounded-2xl bg-white shadow-card-lg border border-slate-100">
-                <div className="relative h-64 w-full bg-slate-100">
+                <div className="relative h-80 w-full bg-slate-100">
                   <Image
                     src={teamPhotos[member.name]}
                     alt={member.name}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[center_20%]"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-xl font-bold text-slate-950">{member.name}</h3>
-                  <p className="text-sm text-gold font-semibold mb-4">Mortgage Advisor</p>
+                  <p className="text-sm text-gold font-semibold">Mortgage Advisor</p>
+                  <p className="text-xs text-slate-400 mb-4">NMLS #{(member as typeof member & { nmls?: string }).nmls}</p>
                   <div className="space-y-2.5">
                     <a href={member.phoneHref} className="flex items-center gap-3 text-sm text-slate-600 hover:text-gold transition">
                       <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-950 text-gold">

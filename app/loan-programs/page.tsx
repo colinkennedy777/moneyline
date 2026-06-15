@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { TrendingDown, Clock, Wallet, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import LoanProgramCard from "@/components/LoanProgramCard";
@@ -21,26 +22,6 @@ const purchaseBenefits = [
   "Clear, upfront cost estimates with no surprises",
 ];
 
-const refinanceReasons = [
-  {
-    icon: TrendingDown,
-    title: "Lower Your Rate",
-    description:
-      "If rates have dropped or your credit has improved, a refinance could shrink your monthly payment significantly.",
-  },
-  {
-    icon: Clock,
-    title: "Shorten Your Term",
-    description:
-      "Move from a 30-year to a 15-year loan to build equity faster and save tens of thousands in interest.",
-  },
-  {
-    icon: Wallet,
-    title: "Access Your Equity",
-    description:
-      "A cash-out refinance lets you use your home's value for renovations, debt consolidation, or big goals.",
-  },
-];
 
 const firstTimeSteps = [
   {
@@ -126,23 +107,20 @@ export default function LoanProgramsPage() {
           <SectionHeading
             dark
             eyebrow="Refinance"
-            title="Three Reasons to Refinance"
+            title="Is It Time to Refinance?"
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {refinanceReasons.map((r) => (
-              <div
-                key={r.title}
-                className="rounded-2xl border border-white/10 bg-navy-light p-8"
-              >
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-gold-light">
-                  <r.icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 text-xl font-bold">{r.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">
-                  {r.description}
-                </p>
-              </div>
-            ))}
+          <p className="mx-auto mt-6 max-w-2xl text-center text-white/70 leading-relaxed">
+            Whether you want to lower your monthly payment, shorten your loan term, or tap into your
+            home&apos;s equity, refinancing could be your smartest financial move. Our advisors will
+            run the numbers at no cost or obligation so you can make a confident decision.
+          </p>
+          <div className="mt-10 text-center">
+            <Link
+              href="/refinance"
+              className="btn-gold inline-flex items-center gap-2 text-base px-8 py-4"
+            >
+              Explore Refinance Options <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>

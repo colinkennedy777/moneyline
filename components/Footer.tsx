@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { navLinks, loanPrograms, site } from "@/lib/site";
+import { Phone, Mail, MapPin, AlertTriangle } from "lucide-react";
+import { navLinks, loanPrograms, site, team } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -20,8 +20,7 @@ export default function Footer() {
             />
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
-            Mortgage solutions built around your MoneyLine. Competitive rates,
-            expert guidance, and a smooth path home.
+            {site.tagline}
           </p>
         </div>
 
@@ -81,12 +80,33 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-light" />
               <span>
-                {site.address.street}
-                <br />
-                {site.address.city}, {site.address.state} {site.address.zip}
+                8028 12th Avenue South<br />
+                St. Petersburg, FL 33707
               </span>
             </li>
+            <li className="pt-2 border-t border-white/10 text-xs text-white/50 space-y-1">
+              {team.map((member) => (
+                <p key={member.name}>
+                  {member.name} · NMLS #{(member as typeof member & { nmls?: string }).nmls}
+                </p>
+              ))}
+            </li>
           </ul>
+        </div>
+      </div>
+
+      {/* Wire Fraud Warning */}
+      <div className="border-t border-white/10">
+        <div className="container-px py-5">
+          <div className="flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3">
+            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
+            <p className="text-xs leading-relaxed text-amber-200/80">
+              <span className="font-bold text-amber-300">BEWARE OF WIRE FRAUD:</span> MoneyLine
+              Mortgage will NEVER send last-minute changes to wire instructions via email or phone.
+              Always verify wiring instructions directly with your settlement agent by calling a
+              known, verified number before transferring any funds.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -96,9 +116,10 @@ export default function Footer() {
             &copy; {year} {site.name}. All rights reserved. NMLS #{site.nmls}.
           </p>
           <p className="max-w-2xl">
-            Equal Housing Lender. This is not a commitment to lend. Rates and
-            terms subject to change without notice. All loans subject to credit
-            approval. NMLS #{site.nmls}.
+            NMLS #{site.nmls} | Scott Kennedy NMLS #366031 | Chad Kennedy NMLS #388262.
+            Licensed Mortgage Lender in the State of Florida. Equal Housing Lender.
+            This is not a commitment to lend. Rates and terms subject to change without notice.
+            All loans subject to credit approval and underwriting guidelines.
           </p>
         </div>
       </div>

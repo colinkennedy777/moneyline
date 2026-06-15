@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Star } from "lucide-react";
-import { valueProps, testimonials } from "@/lib/site";
+import { valueProps, testimonials, stats } from "@/lib/site";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import Icon from "@/components/Icon";
@@ -10,14 +10,14 @@ import FinalCTA from "@/components/FinalCTA";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "MoneyLine Mortgage is a premium mortgage advisory built on transparency, expertise, and genuine care for every client.",
+    "MoneyLine Mortgage is a family-owned Florida mortgage company founded in 1999. Scott and Chad Kennedy — 27+ years helping families finance their homes.",
 };
 
-const stats = [
-  { value: "$1.2B+", label: "Funded in home loans" },
-  { value: "4,500+", label: "Families served" },
-  { value: "21 days", label: "Average time to close" },
-  { value: "4.9/5", label: "Average client rating" },
+const aboutStats = [
+  { value: stats[0].num, label: "Loans Funded" },
+  { value: stats[1].num, label: "Families Served" },
+  { value: stats[2].num, label: "Average Close Time" },
+  { value: stats[3].num, label: "In Business" },
 ];
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About MoneyLine"
         title="Mortgage Expertise with a Human Touch"
-        subtitle="We started MoneyLine Mortgage to prove that getting a home loan doesn't have to be confusing or impersonal. Every client deserves clarity, fair rates, and an advisor in their corner."
+        subtitle="A family-owned Florida mortgage company built on 27+ years of trust, expertise, and genuine care for every client."
       />
 
       <section className="py-20 sm:py-24">
@@ -39,26 +39,28 @@ export default function AboutPage() {
             />
             <div className="mt-6 space-y-4 text-navy/70">
               <p>
-                MoneyLine Mortgage was founded on a simple idea: financing a home
-                should feel empowering, not overwhelming. We combine the
-                competitive rates of a major lender with the personal attention
-                of a trusted local advisor.
+                MoneyLine Mortgage is a family-owned and operated business founded in 1999 — over 27
+                years of helping Florida families achieve homeownership. Scott and Chad Kennedy,
+                brothers and business partners, both earned finance degrees from the University of
+                Florida and have built their careers on the belief that every client deserves honest
+                advice and competitive rates.
               </p>
               <p>
-                Our team has helped thousands of families purchase, refinance,
-                and build wealth through real estate. We measure our success not
-                by loan volume, but by the relationships and homes we help make
-                possible.
+                Scott Kennedy is based on Florida&apos;s West Coast, where he lives with his wife
+                Kris. Their family includes son Colin — a fellow real estate professional working as
+                a Realtor — daughter Devan, and five grandchildren. Scott&apos;s deep roots in the
+                Tampa Bay market give his clients a real edge.
               </p>
               <p>
-                Whether you&apos;re buying your first home or your fifth, you&apos;ll
-                work with a dedicated advisor who explains every option in plain
-                language and fights for your best outcome.
+                Chad Kennedy is based in Central Florida, where he lives with his wife Lynsey and
+                their two boys — Chase, the family genius, and Noah, the hockey extraordinaire.
+                Chad&apos;s expertise in the Orlando and Central Florida market makes him a go-to
+                resource for buyers and investors alike.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-5">
-            {stats.map((s) => (
+            {aboutStats.map((s) => (
               <div
                 key={s.label}
                 className="rounded-2xl border border-navy/5 bg-white p-7 text-center shadow-card"
@@ -100,7 +102,7 @@ export default function AboutPage() {
         <div className="container-px">
           <SectionHeading
             eyebrow="Client Stories"
-            title="Loved by Homeowners Across the Country"
+            title="Loved by Homeowners Across Florida"
           />
           <div className="mx-auto mb-14 mt-8 flex max-w-md flex-col items-center text-center">
             <div className="flex gap-1">
@@ -109,10 +111,10 @@ export default function AboutPage() {
               ))}
             </div>
             <p className="mt-3 font-display text-2xl font-bold text-navy">
-              4.9 out of 5
+              5.0 out of 5
             </p>
             <p className="text-sm text-navy/55">
-              Based on hundreds of verified client reviews
+              Based on verified client reviews from the Tampa Bay and Orlando areas
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

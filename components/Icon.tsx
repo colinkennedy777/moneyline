@@ -9,6 +9,8 @@ import {
   Users,
   Zap,
   MapPin,
+  BarChart2,
+  FileText,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,6 +25,8 @@ const icons: Record<string, LucideIcon> = {
   Users,
   Zap,
   MapPin,
+  BarChart2,
+  FileText,
 };
 
 export default function Icon({
