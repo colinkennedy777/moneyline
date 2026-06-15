@@ -63,17 +63,12 @@ export default function LoanProgramsPage() {
         cta={{ label: "Get Pre-Approved", href: "/contact" }}
       />
 
-      {/* All 6 Loan Program Cards */}
+      {/* All Loan Program Cards */}
       <section className="py-20 sm:py-24">
         <div className="container-px">
-          <SectionHeading
-            eyebrow="Compare Options"
-            title="Six Ways to Finance Your Home"
-            subtitle="Each program has unique benefits. We'll match you with the right one."
-          />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-0 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {loanPrograms.map((p) => (
-              <LoanProgramCard key={p.slug} {...p} />
+              <LoanProgramCard key={p.slug} {...p} href={`/loans/${p.slug}`} />
             ))}
           </div>
         </div>
@@ -98,30 +93,6 @@ export default function LoanProgramsPage() {
             </ul>
           </div>
           <LeadForm title="Start Your Pre-Approval" />
-        </div>
-      </section>
-
-      {/* Refinance Section */}
-      <section className="bg-navy py-20 text-white sm:py-24">
-        <div className="container-px">
-          <SectionHeading
-            dark
-            eyebrow="Refinance"
-            title="Is It Time to Refinance?"
-          />
-          <p className="mx-auto mt-6 max-w-2xl text-center text-white/70 leading-relaxed">
-            Whether you want to lower your monthly payment, shorten your loan term, or tap into your
-            home&apos;s equity, refinancing could be your smartest financial move. Our advisors will
-            run the numbers at no cost or obligation so you can make a confident decision.
-          </p>
-          <div className="mt-10 text-center">
-            <Link
-              href="/refinance"
-              className="btn-gold inline-flex items-center gap-2 text-base px-8 py-4"
-            >
-              Explore Refinance Options <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
 

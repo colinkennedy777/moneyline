@@ -19,8 +19,8 @@ export default function MortgageCalculator({
   const [downPct, setDownPct] = useState(10);
   const [rate, setRate] = useState(6.5);
   const [term, setTerm] = useState(30);
-  const [taxes, setTaxes] = useState(300);
-  const [insurance, setInsurance] = useState(150);
+  const [taxes, setTaxes] = useState(0);
+  const [insurance, setInsurance] = useState(0);
   const [hoa, setHoa] = useState(0);
 
   const downDollars = Math.round((downPct / 100) * purchasePrice);

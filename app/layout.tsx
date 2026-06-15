@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     description:
       "Mortgage solutions built around your MoneyLine. Get pre-approved with clarity, confidence, and competitive rates.",
     url: site.url,
-    images: [{ url: "/logo.png", width: 1536, height: 1024, alt: site.name }],
+    images: [{ url: "/updatedlogo.png", width: 1536, height: 1024, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: "MoneyLine Mortgage",
     description:
       "Mortgage solutions built around your MoneyLine. Get pre-approved today.",
-    images: ["/logo.png"],
+    images: ["/updatedlogo.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -61,7 +61,7 @@ const jsonLd = {
       "@type": "LocalBusiness",
       "@id": `${site.url}/#business`,
       name: site.name,
-      image: `${site.url}/logo.png`,
+      image: `${site.url}/updatedlogo.png`,
       url: site.url,
       telephone: site.phoneHref.replace("tel:", ""),
       email: site.email,

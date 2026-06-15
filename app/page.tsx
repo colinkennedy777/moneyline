@@ -17,7 +17,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=80&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=80&auto=format&fit=crop"
           alt="Modern luxury home"
           fill
           className="object-cover object-center"
@@ -31,9 +31,9 @@ export default function HomePage() {
               Trusted Mortgage Advisors · NMLS #391072
             </span>
             <h1 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[3.5rem] xl:text-6xl">
-              Mortgage Solutions{" "}
-              <span className="text-gold">Built Around</span>{" "}
-              Your MoneyLine.
+              Florida&apos;s Trusted{" "}
+              <span className="text-gold">Mortgage Experts</span>{" "}
+              Since 1999.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/75">
               From first-time buyers to refinancing homeowners, MoneyLine
@@ -51,7 +51,7 @@ export default function HomePage() {
               </Link>
             </div>
             <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/65">
-              {["Same-day pre-approval", "Competitive rates", "Close in 21 days"].map((item) => (
+              {["Same-day pre-approval", "Competitive rates", "Close in 17 days"].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-gold" />
                   {item}
@@ -99,13 +99,13 @@ export default function HomePage() {
         <div className="container-px grid items-center gap-16 lg:grid-cols-2">
           <div className="relative overflow-hidden rounded-3xl aspect-[4/3] shadow-card-lg">
             <Image
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=900&q=80&auto=format&fit=crop"
               alt="Modern luxury home exterior"
               fill
               className="object-cover"
             />
             <div className="absolute bottom-6 left-6 rounded-2xl bg-white/95 backdrop-blur-sm px-5 py-4 shadow-card-lg">
-              <p className="font-display text-2xl font-bold text-slate-950">21 Days</p>
+              <p className="font-display text-2xl font-bold text-slate-950">17 Days</p>
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Average Close Time</p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
       {/* 3-STEP PROCESS */}
       <section className="relative overflow-hidden py-24 sm:py-28">
         <Image
-          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&auto=format&fit=crop"
           alt="Beautiful home at dusk"
           fill
           className="object-cover"

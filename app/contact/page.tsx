@@ -42,6 +42,7 @@ export default function ContactPage() {
                     alt={member.name}
                     fill
                     className="object-cover object-[center_20%]"
+                    style={{ filter: "saturate(0.7) brightness(1.05)" }}
                   />
                 </div>
                 <div className="p-6">

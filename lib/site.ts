@@ -11,7 +11,7 @@ export const site = {
     zip: "33707",
   },
   url: "https://www.moneylinemortgage.com",
-  tagline: "Whether you're purchasing a home or refinancing, we have the right loan for you.",
+  tagline: "Florida's trusted mortgage experts — purchase, refinance & invest with confidence.",
 };
 
 export const team = [
@@ -33,7 +33,6 @@ export const team = [
 
 export const navLinks = [
   { href: "/loan-programs", label: "Loan Programs" },
-  { href: "/refinance", label: "Refinance" },
   { href: "/calculator", label: "Calculator" },
   { href: "/about", label: "About" },
   { href: "/apply", label: "Apply" },
@@ -401,6 +400,6 @@ export const faqs = [
 export const stats = [
   { num: "$500M+", label: "Loans Funded" },
   { num: "1,000+", label: "Happy Homeowners" },
-  { num: "24 Days", label: "Avg. Close Time" },
+  { num: "17 Days", label: "Avg. Close Time" },
   { num: "27+ Years", label: "In Business" },
 ];

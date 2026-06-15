@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav className="container-px flex h-52 items-center justify-between">
         <Link href="/" aria-label={site.name}>
           <Image
-            src="/logo.png"
+            src="/updatedlogo.png"
             alt={site.name}
             width={540}
             height={216}

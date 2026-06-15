@@ -12,7 +12,7 @@ export default function Footer() {
         <div>
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/updatedlogo.png"
               alt={site.name}
               width={130}
               height={52}

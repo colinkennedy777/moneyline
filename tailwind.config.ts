@@ -9,10 +9,10 @@ const config: Config = {
     extend: {
       colors: {
         slate: {
-          950: "#0F172A",
-          900: "#1E293B",
-          800: "#293548",
-          700: "#334155",
+          950: "#0d2410",
+          900: "#1a3a1f",
+          800: "#243d28",
+          700: "#2f5234",
         },
         gold: {
           DEFAULT: "#C9A84C",
@@ -22,9 +22,9 @@ const config: Config = {
         },
         cream: "#FAFAF8",
         navy: {
-          DEFAULT: "#0F172A",
-          light: "#1E293B",
-          dark: "#080E1A",
+          DEFAULT: "#2C6F34",
+          light: "#3d8a47",
+          dark: "#1a4020",
         },
         lightgray: "#F1F5F9",
       },
@@ -39,7 +39,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gold-gradient": "linear-gradient(135deg, #C9A84C 0%, #E8C97A 50%, #C9A84C 100%)",
-        "slate-gradient": "linear-gradient(135deg, #0F172A 0%, #1E293B 100%)",
+        "slate-gradient": "linear-gradient(135deg, #0d2410 0%, #1a3a1f 100%)",
       },
       keyframes: {
         fadeUp: {

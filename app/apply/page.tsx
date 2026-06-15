@@ -8,7 +8,7 @@ import { CheckCircle2, Loader2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const schema = z.object({
-  loanPurpose: z.enum(["purchase", "refinance", "cashout", "dscr", "nonqm"], {
+  loanPurpose: z.enum(["purchase", "refinance"], {
     required_error: "Please select a loan purpose",
   }),
   propertyType: z.enum(["single-family", "condo", "multi-family", "investment"], {
@@ -103,9 +103,6 @@ export default function ApplyPage() {
                 {[
                   { value: "purchase", label: "Purchase" },
                   { value: "refinance", label: "Refinance" },
-                  { value: "cashout", label: "Cash-Out Refinance" },
-                  { value: "dscr", label: "DSCR Loan" },
-                  { value: "nonqm", label: "Non-QM Loan" },
                 ].map(({ value, label }) => (
                   <label
                     key={value}
